@@ -3,11 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif; 
+        }
+
+        nav{
+
+            position: sticky;
+            top: 0;
+            padding: 10px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                background-color: transparent;
+                border: none;
+                padding: 20px;
+                margin: 0px 20px;
+                font-size: 20px;
+                &:hover{
+                 color: rgb(96, 96, 255);   
+                }
+            }
+        }
+        body{
+            background-image: linear-gradient(rgb(212, 212, 255), rgb(255, 255, 255));
+            min-height: 100vh;
+        }
+        main{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            min-height: 60vh;
+            
+            
+            .titlePage{
+                margin: 0px 200px;
+                h1{
+                    line-height: 80%;
+                    width: 400px;
+                    font-weight: 900;
+                    font-size: 100px;
+                    text-transform: uppercase;
+                    span{
+                        color: navy;
+                        font-size: 50px;
+                    }
+                }
+                p{
+                    margin: 10px 0px;
+                    font-size: 20px;
+                }
+                .Homebtn{
+                    display: flex;
+                    align-items: center;
+                    margin: 20px 0px;
+                    p:hover{
+                                cursor: pointer;
+                                color: navy;
+                                text-decoration: underline;
+                                transition: 0.5s all;
+                            }
+                    button{
+                        background-color: navy;
+                        color: white;
+                        width: 150px;
+                        font-size: 18px;
+                        margin-right: 20px;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 50px;
+                        transition: 0.5s all;
+                       
+                        &:hover{
+                            cursor: pointer;
+                            background-color: transparent;
+                            color: navy;
+                            outline: 1px solid navy;
+                        }
+                    }
+                }
+            }
+        }
+        svg{
+            z-index: 10;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
     <title>Home</title>
 </head>
 <body>
+    <nav>
+        <button>Home</button>
+        <button>Clients</button>
+        <button>Developer</button>
+        <button>Contacts</button>
+        <button>About us</button>
+    </nav>
     <main>
-        <h1>Hello World</h1>
+        <div class="titlePage">
+        <h1><span>Nikkie Jin Ro</span> Education</h1>
+        <p>Unlock Your Potential, Enroll Today!</p>
+        <div class="Homebtn">
+            <button id="enrollpage">Enroll Now!</button>
+            <p id="LearnPage">Learn more.</p>
+        </div>
+    </div>
     </main>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L24,256C48,256,96,256,144,218.7C192,181,240,107,288,117.3C336,128,384,224,432,234.7C480,245,528,171,576,149.3C624,128,672,160,720,154.7C768,149,816,107,864,112C912,117,960,171,1008,165.3C1056,160,1104,96,1152,64C1200,32,1248,32,1296,64C1344,96,1392,160,1416,192L1440,224L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
+      </svg>
 </body>
 </html>
