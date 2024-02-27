@@ -97,10 +97,10 @@
             }
           }
         }
-        .Formarea{
+        .SignUp-area{
             background-color: white;
             margin-right: 200px;
-            height: 500px;
+            height: 600px;
             width: 500px;
             border-radius: 15px;
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.13);
@@ -121,6 +121,24 @@
                     input{
                         width: 450px;
                     }
+                }
+                .bttns{
+                  margin-top: 15px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                align-items: center;
+                  button{
+                    border: none;
+                    border-radius: 15px;
+                    padding: 20px;
+                    width: 250px;
+                  }
+                  .CreateAcc{
+                    width: 35   0px;
+                    color: white;
+                    background-color: rgb(52, 52, 255);
+                  }
                 }
                 .flname{
                     input{
@@ -166,8 +184,8 @@
           <p id="LearnPage">Learn more.</p>
         </div> -->
       </div>
-      <div class="Formarea">
-        <h2 style="text-align: center;">Login or Sign Up</h2>
+      <div class="SignUp-area">
+        <h2 style="text-align: center;">Sign Up</h2>
         <form action="">
             <div class="flname">
             <input type="text" placeholder="First Name" >
@@ -177,6 +195,11 @@
             <input type="number" placeholder="Mobile Number">
             <input type="password" placeholder="Password">
             <input type="password" placeholder="Confirm Password">
+            <div class="bttns">
+              <button class="CreateAcc">Create a Account</button>
+              <p>or</p>
+              <button class="LoginAcc">I already have an Account</button>
+            </div>
         </div>
         </form>
       </div>
