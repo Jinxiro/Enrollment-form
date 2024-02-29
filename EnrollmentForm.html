@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enroll</title>
-</head>
-<body>
-    <h1>HELOLO WORLD</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        padding: 10px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        button {
+          background-color: transparent;
+          border: none;
+          padding: 20px;
+          margin: 0px 20px;
+          font-size: 20px;
+          &:hover {
+            color: rgb(96, 96, 255);
+          }
+        }
+        .About-us{
+            margin-right: auto;
+        }
+        .SignUp {
+              background-color: navy;
+              color: white; 
+              width: 200px;
+              font-size: 18px;
+              margin-right: 40px;
+              padding: 10px;
+              border: none;
+              border-radius: 50px;
+              transition: 0.5s all;
+
+              &:hover { 
+                cursor: pointer;
+                background-color: transparent;
+                color: navy;
+                outline: 1px solid navy;
+              }
+            }
+       }
+      body {
+        background-image: linear-gradient(
+          rgb(212, 212, 255),
+          rgb(255, 255, 255)
+        );
+        min-height: 100vh;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+        flex-wrap: wrap;
+        .applyContent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 500px;
+        }
+        
+      }
+      svg {
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+      }
+     
+    </style>
+    <title>Home</title>
+  </head>
+  <body>
+    <nav>
+      <button onclick="location.href='HomePage.html'">Home</button>
+      <button>Clients</button>
+      <button>Contacts</button>
+      <button class="About-us">About us</button>
+      <button class="SignUp" onclick="location.href='Login-SignUp.html'">Log out</button>
+    </nav>
+    <main>
+    <div class="applyContent">
+        <h1>Hi there</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. eos nam natus at dignissimos debitis repellendus assumenda accusamus perspiciatis nostrum.</p>
+        <div class="btns">
+            <button>New Student</button>
+            <button>Old Student</button>
+        </div>
+    </div>
+    </main>
+ 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L120,288C240,288,480,288,720,272C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+      </svg>
+      <script>
+      </script>
+  </body>
 </html>
