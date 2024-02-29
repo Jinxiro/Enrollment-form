@@ -97,16 +97,31 @@
             }
           }
         }
-        .SignUp-area{
+        dialog{
+          margin: auto;
+          border: none;
+          transition: 0.5s ease-in;
+   
+        }
+        dialog::backdrop{
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 1040;
+          width: 100vw;
+          height: 100vh;
+          background-color: rgba(0, 0, 0, 0.4);
+          backdrop-filter: blur(15px);
+        }
+        #SignUparea{
             background-color: white;
-            margin-right: 200px;
-            height: 600px;
+            height: 700px;
             width: 500px;
             border-radius: 15px;
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.13);
             h2{
                 color: navy;
-                margin: 20px;
+                margin: 30px 0px;
             }
             form{
                 display: flex;
@@ -132,10 +147,17 @@
                     border: none;
                     border-radius: 15px;
                     padding: 20px;
+
                     width: 250px;
+                    transition: 0.5s all;
+                    
+                    &:hover{
+                      cursor: pointer;
+                      opacity: 0.5;
+                    }
                   }
                   .CreateAcc{
-                    width: 35   0px;
+                    width: 350px;
                     color: white;
                     background-color: rgb(52, 52, 255);
                   }
@@ -155,14 +177,81 @@
                 }
             }
         }
+        #LoginArea{
+            background-color: white;
+            margin-right: 200px;
+            height: 500px;
+            width: 500px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.13);
+            h2{
+                color: navy;
+                margin: 30px 0px;
+            }
+            form{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                .inform{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    input{
+                        width: 450px;
+                    }
+                }
+                .bttns{
+                  margin-top: 15px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  button{
+                    border: none;
+                    border-radius: 15px;
+                    padding: 20px;
+                    width: 250px;
+  
+                    transition: 0.5s all;
+                    &:hover{
+                      cursor: pointer;
+                      opacity: 0.5;
+                    }
+                  }
+                  .LoginAcc{
+                    width: 350px;
+                    color: white;
+                    background-color: rgb(52, 52, 255);
+                  }
+                  .CreateAcc{
+                    background-color: rgb(186, 181, 255);
+                  }
+                }
+                .flname{
+                    input{
+                        width: 210px;
+                    }
+                }
+                input{
+                    background-color: whitesmoke;
+                    border-radius: 15px;
+                    width: 350px;
+                    border: none;
+                    margin: 10px;
+                    padding: 25px;
+                    
+                }
+            }
+        }
       }
       svg {
         z-index: 10;
         position: absolute;
         bottom: 0;
-        
       }
-     
+
     </style>
     <title>Account</title>
   </head>
@@ -184,28 +273,52 @@
           <p id="LearnPage">Learn more.</p>
         </div> -->
       </div>
-      <div class="SignUp-area">
+
+      <dialog id="SignUparea">
         <h2 style="text-align: center;">Sign Up</h2>
-        <form action="">
+        <form method="dialog">
             <div class="flname">
             <input type="text" placeholder="First Name" >
             <input type="text" placeholder="Last Name" >
         </div>
         <div class="inform">
+            <input type="text" placeholder="Email (Username@gmail.com)">
             <input type="number" placeholder="Mobile Number">
             <input type="password" placeholder="Password">
             <input type="password" placeholder="Confirm Password">
             <div class="bttns">
               <button class="CreateAcc">Create a Account</button>
-              <p>or</p>
+              <p style="margin: 10px 0px;">or</p>
               <button class="LoginAcc">I already have an Account</button>
             </div>
         </div>
         </form>
-      </div>
+      </dialog>
+
+
+      <div id="LoginArea">
+        <h2 style="text-align: center;">Login Account</h2>
+        <form method="dialog">
+            
+        <div class="inform">
+            <input type="text" placeholder="Email or Mobile Number">
+            <input type="password" placeholder="Password">
+            <div class="bttns">
+              <button class="LoginAcc">Login</button>
+              <p style="margin: 10px 0px;">or</p>
+              <button class="CreateAcc" onclick="SignUparea.showModal(); CreateAccbtn()">Create a Account</button>
+            </div>
+        </div>
+        </form>
+    </div>
     </main>
  
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,186.7C672,192,768,256,864,282.7C960,309,1056,299,1152,282.7C1248,267,1344,245,1392,234.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
       </svg>
+      <script>
+        function CreateAccbtn(){
+         dialog.style.opacity = 1;
+        }
+      </script>
   </body>
 </html>
