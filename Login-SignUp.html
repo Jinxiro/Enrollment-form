@@ -331,10 +331,9 @@
           return (admin.email === emailNumber || admin.phoneNum === emailNumber) && admin.password === password;
         });
         if (isAdmin) {
-          alert("naka sulod");
+          window.location.href="EnrollmentForm.html";
         }else{
-          alert("pass");
-          
+          alert("Invalid Input");
         }
 
       }
