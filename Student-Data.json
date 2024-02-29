@@ -1,0 +1,12 @@
+{
+    "admins": [
+        {
+            "id": 1,
+            "firstName": "Jinro",
+            "lastName": "Militar",
+            "email": "jammilitar@gmail.com",
+            "phoneNum": "09287350411",
+            "password": "admin"
+        }
+    ]
+}
