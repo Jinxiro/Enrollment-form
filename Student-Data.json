@@ -12,20 +12,20 @@
     "newStudents": [
         { 
             "id": 101,
-            "firstName": "Jurell",
-            "midName": "Puerto",
-            "lastName": "Sierra",
-            "address": "purok 3, amparo village",
+            "firstName": "Mauriane Jave",
+            "midName": "Tan",
+            "lastName": "Melody",
+            "address": "Matina Crossing",
             "city" : "Davao city",
             "province" : "Davao Del sur",
-            "birthDay" : "Jan 07, 2002",
-            "age" : 29,
+            "birthDay" : "2004-10-04",
+            "age" : 21,
             "nationality" : "Filipino",
-            "birthPlace" : "Panabo city",
-            "religion" : "catholic",
-            "gender" : "male",  
+            "birthPlace" : "General Santos City",
+            "religion" : "Christian",
+            "gender" : "female",  
             "phoneNum" : "09287350411",  
-            "email" : "jammilitar@gmail.com"
+            "email" : "Melody@gmail.com"
         },
         { 
             "id": 102,

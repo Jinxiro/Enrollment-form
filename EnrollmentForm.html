@@ -181,6 +181,48 @@
             }
         }
 
+        #InfoView {
+            width: 1000px;
+            height:750px;
+            
+
+            .infoContainer {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+
+                #contents {
+                    margin: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .details, .biograp{
+                        h3{
+                            background-color: whitesmoke;
+                            padding: 10px;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .avatar {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        margin: 20px 40px;
+                        
+                        img {
+                            border-radius: 100px;
+                            height: 200px;
+                        }
+                    }
+                    /* .containerDetails{
+                    
+                    } */
+                }
+            }
+        }
+
         main {
             display: flex;
             justify-content: center;
@@ -324,6 +366,8 @@
     <dialog id="InfoView">
         <div class="infoContainer">
             <div id="contents">
+                <img src="https://scontent.fdvo5-1.fna.fbcdn.net/v/t39.30808-1/393698970_3553501891581019_6366903589998943007_n.jpg?stp=dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeFMg6FEcmf9OgL1DUMbGZ0MjlazwKwHmj6OVrPArAeaPrCy4gQYzqYRamkRLJ802DFUZBuiUEueQrNVGbMAVooI&_nc_ohc=pkWyhvElU1IAX-BonSJ&_nc_ht=scontent.fdvo5-1.fna&oh=00_AfAFcAZExD4nYtBBo5EIhriwG5IUzP67wZqlulp1JRbLMg&oe=65EAFF5A"
+                    alt="">
                 <h3>Jinro Militar</h3>
                 <p>Address: </p>
                 <p>Contacts Number: </p>
@@ -394,16 +438,36 @@
             InfoView.showModal();
             let student = students[index];
             contents.innerHTML = `
+            
+        <div class="avatar">
+            <img src="https://scontent.fdvo5-1.fna.fbcdn.net/v/t39.30808-1/382981942_648185724136222_1738161981365832909_n.jpg?stp=dst-jpg_p200x200&_nc_cat=102&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeHILAObOY3yfSYO4a2lRc1-O91fL2fsHLw73V8vZ-wcvBd-C42LoGQ9Cjg3wxm1_fQ7mqCGyn_atYWi4CgTj0FC&_nc_ohc=uYQ_3VWWvQwAX9vm3Nz&_nc_ht=scontent.fdvo5-1.fna&oh=00_AfC44d9ZsjH_AoVJdrSflQCMyv5q4PnORBthEl-3_JxVaw&oe=65EB88ED" alt="">
             <h3>${student.firstName} ${student.midName} ${student.lastName}</h3>
-                <p>Address: ${student.address}, ${student.city}, ${student.Province}</p>
-                <p>Contacts Number: ${student.phoneNum} </p>
-                <p>Email: ${student.email}</p>
-                <p>Birth Day: ${student.birthDay}</p>
-                <p>Age: ${student.age}</p>
-                <p>Gender: ${student.gender} </p>
-                <p>Nationality: ${student.nationality} </p>
-                <p>Birth Place:  ${student.birthPlace}</p>
-                <p style="font-weight: bold;">Course: Diploma in Information Technology</p>
+            <p>ID: ${student.id}</p>
+        </div> 
+
+            <div class="containerDetails">
+                <div class="details">
+                    <p>Address: </p>
+                    <h3>${student.address}, ${student.city}, ${student.province}</h3>
+                    <p>Contacts Number: </p>
+                    <h3>${student.phoneNum}</h3>
+                    <p>Email: </p>
+                    <h3>${student.email}</h3>
+                    </div>
+                    <div class="biograp">
+                        <p>Birth Day:</p>
+                        <h3>${student.birthDay}</h3>
+                        <p>Age:</p>
+                        <h3>${student.age}</h3>
+                        <p>Gender:</p>
+                        <h3>${student.gender}</h3>
+                        <p>Nationality:</p>
+                        <h3> ${student.nationality} </h3>
+                        <p>Birth Place:</p>
+                        <h3>${student.birthPlace}</h3>
+                </div>
+                <h2 style="font-weight: bold;" class="courseIs">Diploma in Information Technology</h2>
+            </div>
             `;
         }
         function generateId() {
@@ -440,14 +504,14 @@
                 "middleName": midName,
                 "address": AddressInfo,
                 "city": cityInfo,
-                "state": StateProv,
+                "province": StateProv,
                 "birthDay": Birthday,
                 "age": AgeOld,
                 "nationality": nationality,
                 "birthPlace": Birthplace,
                 "religion": religion,
                 "gender": gender,
-                "phoneNumber": phneNum,
+                "phoneNum": phneNum,
                 "email": email
             };
             console.log(studentData);
