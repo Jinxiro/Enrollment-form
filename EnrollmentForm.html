@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -130,19 +130,21 @@
                 }
             }
         }
-            
-        dialog::backdrop{
-          position: fixed;
-          top: 0;
-          left: 0;
-          z-index: 1040;
-          width: 100vw;
-          height: 100vh;
-          background-color: rgba(0, 0, 0, 0.4);
-          backdrop-filter: blur(2px);
+
+        dialog::backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1040;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(2px);
         }
+
         #StudentList {
             width: 800px;
+
             #student {
                 display: flex;
                 border-radius: 10px;
@@ -155,11 +157,13 @@
                 p {
                     margin: 0px 10px;
                 }
-                .course{
+
+                .course {
                     margin-right: auto;
                 }
+
                 button {
-                    
+
                     color: white;
                     border: none;
                     border-radius: 10px;
@@ -168,7 +172,8 @@
                     padding: 10px;
                     margin: 0px 5px;
                     transition: .2s ease;
-                    &:hover{
+
+                    &:hover {
                         cursor: pointer;
                         opacity: .5;
                     }
@@ -189,14 +194,17 @@
                 align-items: center;
                 flex-direction: column;
                 width: 700px;
-                .fullname{
+
+                .fullname {
                     font-weight: bold;
 
                 }
-                .course{
+
+                .course {
                     margin-right: auto;
-                    
+
                 }
+
                 h1 {
                     font-size: 100px;
                 }
@@ -255,24 +263,24 @@
         <h1>Enrollment Forum</h1>
         <form action="" method="dialog">
             <div class="fullName">
-                <input type="text" placeholder="Last Name">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Middle Name">
+                <input type="text" placeholder="First Name" id="Mname">
+                <input type="text" placeholder="Middle Name" id="Lname">
+                <input type="text" placeholder="Last Name" id="fname">
             </div>
 
-            <input type="text" placeholder="Address" style="width: 635px;">
+            <input type="text" placeholder="Address" style="width: 635px;" id="Address">
             <div>
-                <input type="text" placeholder="City" style="width: 310px;">
-                <input type="text" placeholder="State/Province" style="width: 310px;">
+                <input type="text" placeholder="City" style="width: 310px;" id="city">
+                <input type="text" placeholder="State/Province" style="width: 310px;" id="Province">
             </div>
             <div>
-                <input type="date" placeholder="Birth Day" style="width: 200px;">
-                <input type="number" placeholder="Age">
-                <input type="text" placeholder="Nationality">
+                <input type="date" placeholder="Birth Day" style="width: 200px;" id="Bday">
+                <input type="number" placeholder="Age" id="Age">
+                <input type="text" placeholder="Nationality" id="Nationality">
             </div>
             <div>
-                <input type="text" placeholder="Birth Place" style="width: 310px;">
-                <input type="text" placeholder="Religion" style="width: 310px;">
+                <input type="text" placeholder="Birth Place" style="width: 310px;" id="BirthPlace">
+                <input type="text" placeholder="Religion" style="width: 310px;" id="Religion">
             </div>
             <div class="gender">
                 <div class="male">
@@ -289,18 +297,18 @@
                 </div>
             </div>
             <div>
-                <input type="number" placeholder="Phone Number" style="width: 310px;">
-                <input type="email" placeholder="Email (example@example.com)" style="width: 310px;">
+                <input type="number" placeholder="Phone Number" style="width: 310px;" id="phoneNum">
+                <input type="email" placeholder="Email (example@example.com)" style="width: 310px;" id="emailAdd">
             </div>
 
 
             <div class="formBtns">
-                <button id="submit">Submit</button>
+                <button id="submit" onclick="EnrollStudent()">Submit</button>
                 <button id="Cancel">Cancel</button>
             </div>
         </form>
     </dialog>
-    <dialog id="StudentList" >
+    <dialog id="StudentList">
         <div class="StudentList" id="studentCont">
             <h1>DIPLOMA STUDENTS</h1>
             <!-- <div id="student">
@@ -342,13 +350,13 @@
             accounts = await response.json();
 
             students = accounts.newStudents;
-            
-            
+
+
             displayStudent();
         }
-        
+
         function displayStudent() {
-   
+            studentCont.innerHTML = `<h1>DIPLOMA STUDENTS</h1>`;
             for (let index = 0; index < students.length; index++) {
                 const student = students[index];
                 studentCont.innerHTML += `
@@ -366,6 +374,57 @@
             `;
             }
         }
+
+        function generateId() {
+            let maxId = 0;
+            for (let i = 0; i < students.length; i++) {
+                if (students[i].id > maxId) {
+                    maxId = students[i].id;
+                }
+            }
+            return maxId + 1;
+        }
+
+        function EnrollStudent() {
+
+            let firname = fname.value;
+            let Midname = Mname.value;
+            let Lastname = Lname.value;
+            let AddressInfo = Address.value;
+            let cityInfo = city.value;
+            let StateProv = Province.value;
+            let Birthday = Bday.value;
+            let AgeOld = Age.value;
+            let nationality = Nationality.value;
+            let Birthplace = BirthPlace.value;
+            let religion = Religion.value;
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let phneNum = phoneNum.value;
+            let email = emailAdd.value;
+
+            let studentData = {
+                "id": generateId(),
+                "lastName": Lastname,
+                "firstName": firname,
+                "middleName": Lastname,
+                "address": AddressInfo,
+                "city": cityInfo,
+                "state": StateProv,
+                "birthDay": Birthday,
+                "age": AgeOld,
+                "nationality": nationality,
+                "birthPlace": Birthplace,
+                "religion": religion,
+                "gender": gender,
+                "phoneNumber": phneNum,
+                "email": email
+            };
+            console.log(studentData);
+            accounts.newStudents.push(studentData);
+            StudentList.showModal();
+            displayStudent();
+        }
+        displayStudent();
         getData();
     </script>
 </body>
