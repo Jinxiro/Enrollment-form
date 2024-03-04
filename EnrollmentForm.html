@@ -263,9 +263,9 @@
         <h1>Enrollment Forum</h1>
         <form action="" method="dialog">
             <div class="fullName">
-                <input type="text" placeholder="First Name" id="Mname">
-                <input type="text" placeholder="Middle Name" id="Lname">
-                <input type="text" placeholder="Last Name" id="fname">
+                <input type="text" placeholder="First Name" id="fname">
+                <input type="text" placeholder="Middle Name" id="Mname">
+                <input type="text" placeholder="Last Name" id="Lname">
             </div>
 
             <input type="text" placeholder="Address" style="width: 635px;" id="Address">
@@ -321,6 +321,22 @@
             </div> -->
         </div>
     </dialog>
+    <dialog id="InfoView">
+        <div class="infoContainer">
+            <div id="contents">
+                <h3>Jinro Militar</h3>
+                <p>Address: </p>
+                <p>Contacts Number: </p>
+                <p>Email: </p>
+                <p>Birth Day: </p>
+                <p>Age: </p>
+                <p>Gender: </p>
+                <p>Nationality: </p>
+                <p>Birth Place: </p>
+                <p>Course: Diploma in Information Technology</p>
+            </div>
+        </div>
+    </dialog>
     <main>
 
         <div class="applyContent">
@@ -366,7 +382,7 @@
                 <p style="font-weight: bold;" >${student.firstName} ${student.lastName}</p>
                 <p  style="text-decoration: underline;">${student.email}</p>
                 <p class="course">Course: IT</p>
-                <button>View</button>
+                <button onclick="viewInfo(${index})">View</button>
                 <button>Edit</button>
                 <button style="background-color: rgb(255, 64, 64);">Delete</button>
             </div>
@@ -374,7 +390,22 @@
             `;
             }
         }
-
+        function viewInfo(index) {
+            InfoView.showModal();
+            let student = students[index];
+            contents.innerHTML = `
+            <h3>${student.firstName} ${student.midName} ${student.lastName}</h3>
+                <p>Address: ${student.address}, ${student.city}, ${student.Province}</p>
+                <p>Contacts Number: ${student.phoneNum} </p>
+                <p>Email: ${student.email}</p>
+                <p>Birth Day: ${student.birthDay}</p>
+                <p>Age: ${student.age}</p>
+                <p>Gender: ${student.gender} </p>
+                <p>Nationality: ${student.nationality} </p>
+                <p>Birth Place:  ${student.birthPlace}</p>
+                <p style="font-weight: bold;">Course: Diploma in Information Technology</p>
+            `;
+        }
         function generateId() {
             let maxId = 0;
             for (let i = 0; i < students.length; i++) {
@@ -387,8 +418,8 @@
 
         function EnrollStudent() {
 
-            let firname = fname.value;
-            let Midname = Mname.value;
+            let firstname = fname.value;
+            let midName = Mname.value;
             let Lastname = Lname.value;
             let AddressInfo = Address.value;
             let cityInfo = city.value;
@@ -405,8 +436,8 @@
             let studentData = {
                 "id": generateId(),
                 "lastName": Lastname,
-                "firstName": firname,
-                "middleName": Lastname,
+                "firstName": firstname,
+                "middleName": midName,
                 "address": AddressInfo,
                 "city": cityInfo,
                 "state": StateProv,
