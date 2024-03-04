@@ -319,6 +319,7 @@
         let response = await fetch("http://localhost/Enrollment-Form/Student-Data.json");
         accounts = await response.json(); 
     
+    
       }
       
       function LoginAcc(){
@@ -326,7 +327,7 @@
       let password = passwordInput.value;
 
       if (accounts) {
-        let isAdmin = accounts.admins.some(admin =>{
+        let isAdmin = accounts.admins.some(admin => {
           return (admin.email === emailNumber || admin.phoneNum === emailNumber) && admin.password === password;
         });
         if (isAdmin) {

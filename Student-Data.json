@@ -8,5 +8,58 @@
             "phoneNum": "09287350411",
             "password": "admin"
         }
+    ],
+    "newStudents": [
+        { 
+            "id": 101,
+            "firstName": "Jurell",
+            "midName": "Puerto",
+            "lastName": "Sierra",
+            "address": "purok 3, amparo village",
+            "city" : "Davao city",
+            "province" : "Davao Del sur",
+            "birthDay" : "Jan 07, 2002",
+            "age" : 29,
+            "nationality" : "Filipino",
+            "birthPlace" : "Panabo city",
+            "religion" : "catholic",
+            "gender" : "male",  
+            "phoneNum" : "09287350411",  
+            "email" : "jammilitar@gmail.com"
+        },
+        { 
+            "id": 102,
+            "firstName": "Paul",
+            "midName": "Puerto",
+            "lastName": "Morales",
+            "address": "purok 3, amparo village",
+            "city" : "Davao city",
+            "province" : "Davao Del sur",
+            "birthDay" : "Jan 07, 2002",
+            "age" : 29,
+            "nationality" : "Filipino",
+            "birthPlace" : "Panabo city",
+            "religion" : "catholic",
+            "gender" : "male",  
+            "phoneNum" : "09287350411",  
+            "email" : "jammilitar@gmail.com"
+        },
+        { 
+            "id": 103,
+            "firstName": "Jinro",
+            "midName": "Puerto",
+            "lastName": "Militar",
+            "address": "purok 3, amparo village",
+            "city" : "Davao city",
+            "province" : "Davao Del sur",
+            "birthDay" : "Jan 07, 2002",
+            "age" : 29,
+            "nationality" : "Filipino",
+            "birthPlace" : "Panabo city",
+            "religion" : "catholic",
+            "gender" : "male",  
+            "phoneNum" : "09287350411",  
+            "email" : "jammilitar@gmail.com"
+        }
     ]
 }
