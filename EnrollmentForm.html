@@ -73,7 +73,7 @@
             border: none;
             margin: auto;
             padding: 20px;
-            width: 700px;
+            width: 750px;
             height: 800px;
 
             form {
@@ -103,6 +103,20 @@
                         margin: 0px 20px;
                     }
                 }
+                .courseIs{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    select{
+                        margin: 10px 0px;
+                        width: 500px;
+                        background-color: whitesmoke;
+                        border: none;
+                        border-radius: 10px;
+                        padding: 20px;
+                    }
+                }
 
                 .formBtns {
                     #submit {
@@ -128,6 +142,7 @@
                         }
                     }
                 }
+
             }
         }
 
@@ -143,7 +158,7 @@
         }
 
         #StudentList {
-            width: 800px;
+            width: 1000px;
 
             #student {
                 display: flex;
@@ -183,7 +198,7 @@
 
         #InfoView {
             width: 1000px;
-            height:750px;
+            height: 750px;
             
 
             .infoContainer {
@@ -343,6 +358,15 @@
                 <input type="email" placeholder="Email (example@example.com)" style="width: 310px;" id="emailAdd">
             </div>
 
+            <div class="courseIs">
+                <label for="course">Diploma you choose:</label>
+                <select name="Diploma" id="course">
+                  <option value="Diploma in Information Technology">Diploma in Information Technology</option>
+                  <option value="Diploma in Mechanical Engineering Technology">Diploma in Mechanical Engineering Technology</option>
+                  <option value="Diploma in Mechanical Specialized in Welding">Diploma in Mechanical Specialized in Welding</option>
+                  <option value="Diploma in Civil Engineering Technology">Diploma in Civil Engineering Technology</option>
+                </select>
+            </div>
 
             <div class="formBtns">
                 <button id="submit" onclick="EnrollStudent()">Submit</button>
@@ -356,7 +380,7 @@
             <!-- <div id="student">
                 <p>Name: Jurell Sierra</p>
                 <p>Email: jammilitar</p>
-                <p>Course: IT</p>
+                <p>Course: DIT</p>
                 <button>View</button>
                 <button>Edit</button>
                 <button>Delete</button>
@@ -367,7 +391,7 @@
         <div class="infoContainer">
             <div id="contents">
                 <img src="https://scontent.fdvo5-1.fna.fbcdn.net/v/t39.30808-1/393698970_3553501891581019_6366903589998943007_n.jpg?stp=dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeFMg6FEcmf9OgL1DUMbGZ0MjlazwKwHmj6OVrPArAeaPrCy4gQYzqYRamkRLJ802DFUZBuiUEueQrNVGbMAVooI&_nc_ohc=pkWyhvElU1IAX-BonSJ&_nc_ht=scontent.fdvo5-1.fna&oh=00_AfAFcAZExD4nYtBBo5EIhriwG5IUzP67wZqlulp1JRbLMg&oe=65EAFF5A"
-                    alt="">
+                    alt=""> 
                 <h3>Jinro Militar</h3>
                 <p>Address: </p>
                 <p>Contacts Number: </p>
@@ -425,7 +449,7 @@
                 <p>ID: ${student.id}</p>
                 <p style="font-weight: bold;" >${student.firstName} ${student.lastName}</p>
                 <p  style="text-decoration: underline;">${student.email}</p>
-                <p class="course">Course: IT</p>
+                <p class="course">Course: ${student.diploma}</p>
                 <button onclick="viewInfo(${index})">View</button>
                 <button>Edit</button>
                 <button style="background-color: rgb(255, 64, 64);">Delete</button>
@@ -466,7 +490,7 @@
                         <p>Birth Place:</p>
                         <h3>${student.birthPlace}</h3>
                 </div>
-                <h2 style="font-weight: bold;" class="courseIs">Diploma in Information Technology</h2>
+                <h2 style="font-weight: bold;" class="courseIs">${student.diploma}</h2>
             </div>
             `;
         }
@@ -496,6 +520,7 @@
             let gender = document.querySelector('input[name="gender"]:checked').value;
             let phneNum = phoneNum.value;
             let email = emailAdd.value;
+            let courseIs = course.value;
 
             let studentData = {
                 "id": generateId(),
@@ -512,7 +537,8 @@
                 "religion": religion,
                 "gender": gender,
                 "phoneNum": phneNum,
-                "email": email
+                "email": email,
+                "diploma": courseIs
             };
             console.log(studentData);
             accounts.newStudents.push(studentData);

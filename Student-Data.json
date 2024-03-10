@@ -13,8 +13,8 @@
         { 
             "id": 101,
             "firstName": "Mauriane Jave",
-            "midName": "Tan",
-            "lastName": "Melody",
+            "midName": "Melody",
+            "lastName": "Tan",
             "address": "Matina Crossing",
             "city" : "Davao city",
             "province" : "Davao Del sur",
@@ -25,7 +25,8 @@
             "religion" : "Christian",
             "gender" : "female",  
             "phoneNum" : "09287350411",  
-            "email" : "Melody@gmail.com"
+            "email" : "Melody@gmail.com",
+            "diploma" : "Diploma in Information Technology"
         },
         { 
             "id": 102,
@@ -42,7 +43,9 @@
             "religion" : "catholic",
             "gender" : "male",  
             "phoneNum" : "09287350411",  
-            "email" : "jammilitar@gmail.com"
+            "email" : "jammilitar@gmail.com",
+            "diploma" : "Diploma in Information Technology"
+            
         },
         { 
             "id": 103,
@@ -59,7 +62,8 @@
             "religion" : "catholic",
             "gender" : "male",  
             "phoneNum" : "09287350411",  
-            "email" : "jammilitar@gmail.com"
+            "email" : "jammilitar@gmail.com",
+            "diploma" : "Diploma in Information Technology"
         }
     ]
 }
