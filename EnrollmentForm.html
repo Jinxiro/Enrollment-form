@@ -103,12 +103,14 @@
                         margin: 0px 20px;
                     }
                 }
-                .courseIs{
+
+                .courseIs {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    select{
+
+                    select {
                         margin: 10px 0px;
                         width: 500px;
                         background-color: whitesmoke;
@@ -199,7 +201,7 @@
         #InfoView {
             width: 1000px;
             height: 750px;
-            
+
 
             .infoContainer {
                 display: flex;
@@ -211,12 +213,18 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    .details, .biograp{
-                        h3{
+
+                    .details,
+                    .biograp {
+                        h3 {
                             background-color: whitesmoke;
                             padding: 10px;
                             border-radius: 10px;
                         }
+                    }
+
+                    h2 {
+                        margin: 15px 0px;
                     }
 
                     .avatar {
@@ -225,12 +233,18 @@
                         align-items: center;
                         flex-direction: column;
                         margin: 20px 40px;
-                        
+
                         img {
+                            object-fit: cover;
+                            margin: 10px;
+                            border: 0.2px solid rgb(134, 134, 134);
                             border-radius: 100px;
+                            width: 200px;
                             height: 200px;
+                            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.151);
                         }
                     }
+
                     /* .containerDetails{
                     
                     } */
@@ -332,7 +346,7 @@
             </div>
             <div>
                 <input type="date" placeholder="Birth Day" style="width: 200px;" id="Bday">
-                <input type="number" placeholder="Age" id="Age">
+                <input type="number" placeholder="Age" id="Age" maxlength="2">
                 <input type="text" placeholder="Nationality" id="Nationality">
             </div>
             <div>
@@ -354,25 +368,99 @@
                 </div>
             </div>
             <div>
-                <input type="number" placeholder="Phone Number" style="width: 310px;" id="phoneNum">
+                <input type="number" placeholder="Phone Number" style="width: 310px;" id="phoneNum" maxlength="11">
                 <input type="email" placeholder="Email (example@example.com)" style="width: 310px;" id="emailAdd">
             </div>
 
             <div class="courseIs">
                 <label for="course">Diploma you choose:</label>
                 <select name="Diploma" id="course">
-                  <option value="Diploma in Information Technology">Diploma in Information Technology</option>
-                  <option value="Diploma in Mechanical Engineering Technology">Diploma in Mechanical Engineering Technology</option>
-                  <option value="Diploma in Mechanical Specialized in Welding">Diploma in Mechanical Specialized in Welding</option>
-                  <option value="Diploma in Civil Engineering Technology">Diploma in Civil Engineering Technology</option>
+                    <option value="Diploma in Information Technology">Diploma in Information Technology</option>
+                    <option value="Diploma in Mechanical Engineering Technology">Diploma in Mechanical Engineering
+                        Technology</option>
+                    <option value="Diploma in Mechanical Specialized in Welding">Diploma in Mechanical Specialized in
+                        Welding</option>
+                    <option value="Diploma in Civil Engineering Technology">Diploma in Civil Engineering Technology
+                    </option>
                 </select>
             </div>
-
+            <div class="attachImage">
+                <label for="ImgUrl">Attach Image</label>
+                <input type="text" name="" id="ImgUrl" placeholder="Attach Image using URL" style="width: 500px;">
+            </div>
             <div class="formBtns">
                 <button id="submit" onclick="EnrollStudent()">Submit</button>
                 <button id="Cancel">Cancel</button>
             </div>
         </form>
+    </dialog>
+
+    <dialog id="updatenewStdnt">
+        <div id="update">
+            <h1>Enrollment Forum</h1>
+
+            <form action="" method="dialog">
+                <div class="fullName">
+                    <input type="text" placeholder="First Name" id="fname">
+                    <input type="text" placeholder="Middle Name" id="Mname">
+                    <input type="text" placeholder="Last Name" id="Lname">
+                </div>
+
+                <input type="text" placeholder="Address" style="width: 635px;" id="Address">
+                <div>
+                    <input type="text" placeholder="City" style="width: 310px;" id="city">
+                    <input type="text" placeholder="State/Province" style="width: 310px;" id="Province">
+                </div>
+                <div>
+                    <input type="date" placeholder="Birth Day" style="width: 200px;" id="Bday">
+                    <input type="number" placeholder="Age" id="Age" maxlength="2">
+                    <input type="text" placeholder="Nationality" id="Nationality">
+                </div>
+                <div>
+                    <input type="text" placeholder="Birth Place" style="width: 310px;" id="BirthPlace">
+                    <input type="text" placeholder="Religion" style="width: 310px;" id="Religion">
+                </div>
+                <div class="gender">
+                    <div class="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="male" value="male">
+                    </div>
+                    <div class="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                    </div>
+                    <div class="other">
+                        <label for="other">Other</label>
+                        <input type="radio" name="gender" id="other" value="N/A">
+                    </div>
+                </div>
+                <div>
+                    <input type="number" placeholder="Phone Number" style="width: 310px;" id="phoneNum" maxlength="11">
+                    <input type="email" placeholder="Email (example@example.com)" style="width: 310px;" id="emailAdd">
+                </div>
+
+                <div class="courseIs">
+                    <label for="course">Diploma you choose:</label>
+                    <select name="Diploma" id="course">
+                        <option value="Diploma in Information Technology">Diploma in Information Technology</option>
+                        <option value="Diploma in Mechanical Engineering Technology">Diploma in Mechanical Engineering
+                            Technology</option>
+                        <option value="Diploma in Mechanical Specialized in Welding">Diploma in Mechanical Specialized
+                            in Welding</option>
+                        <option value="Diploma in Civil Engineering Technology">Diploma in Civil Engineering Technology
+                        </option>
+                    </select>
+                </div>
+                <div class="attachImage">
+                    <label for="ImgUrl">Attach Image</label>
+                    <input type="text" name="" id="ImgUrl" placeholder="Attach Image using URL" style="width: 500px;">
+                </div>
+                <div class="formBtns">
+                    <button id="submit" onclick="UpdateStudent(index)">Update</button>
+                    <button id="Cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
     </dialog>
     <dialog id="StudentList">
         <div class="StudentList" id="studentCont">
@@ -391,7 +479,7 @@
         <div class="infoContainer">
             <div id="contents">
                 <img src="https://scontent.fdvo5-1.fna.fbcdn.net/v/t39.30808-1/393698970_3553501891581019_6366903589998943007_n.jpg?stp=dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeFMg6FEcmf9OgL1DUMbGZ0MjlazwKwHmj6OVrPArAeaPrCy4gQYzqYRamkRLJ802DFUZBuiUEueQrNVGbMAVooI&_nc_ohc=pkWyhvElU1IAX-BonSJ&_nc_ht=scontent.fdvo5-1.fna&oh=00_AfAFcAZExD4nYtBBo5EIhriwG5IUzP67wZqlulp1JRbLMg&oe=65EAFF5A"
-                    alt=""> 
+                    alt="">
                 <h3>Jinro Militar</h3>
                 <p>Address: </p>
                 <p>Contacts Number: </p>
@@ -429,6 +517,7 @@
     <script>
         let students = [];
         let accounts = [];
+        let newStudents = [];
         async function getData() {
             let response = await fetch("http://localhost/Enrollment-Form/Student-Data.json");
             accounts = await response.json();
@@ -451,8 +540,8 @@
                 <p  style="text-decoration: underline;">${student.email}</p>
                 <p class="course">Course: ${student.diploma}</p>
                 <button onclick="viewInfo(${index})">View</button>
-                <button>Edit</button>
-                <button style="background-color: rgb(255, 64, 64);">Delete</button>
+                <button onclick="EditBtn(${index})">Edit</button>
+                <button style="background-color: rgb(255, 64, 64);" onclick="removeItems(${index})">Delete</button>
             </div>
         </div>
             `;
@@ -464,7 +553,7 @@
             contents.innerHTML = `
             
         <div class="avatar">
-            <img src="https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-1/393698970_3553501891581019_6366903589998943007_n.jpg?stp=dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeFMg6FEcmf9OgL1DUMbGZ0MjlazwKwHmj6OVrPArAeaPrCy4gQYzqYRamkRLJ802DFUZBuiUEueQrNVGbMAVooI&_nc_ohc=pkWyhvElU1IAX8b8rhy&_nc_ht=scontent.fmnl4-3.fna&oh=00_AfB0MZDNDyt_xncEIRRsZhsUw4PTpWhiSznFU9IsvHAJhg&oe=65EAFF5A" alt="">
+            <img src="${student.imageUrl}" alt="">
             <h3>${student.firstName} ${student.midName} ${student.lastName}</h3>
             <p>ID: ${student.id}</p>
         </div> 
@@ -495,7 +584,7 @@
             `;
         }
         function generateId() {
-            let maxId = 0;
+            let maxId = 100;
             for (let i = 0; i < students.length; i++) {
                 if (students[i].id > maxId) {
                     maxId = students[i].id;
@@ -505,7 +594,7 @@
         }
 
         function EnrollStudent() {
-
+            let image = ImgUrl.value;
             let firstname = fname.value;
             let middleName = Mname.value;
             let Lastname = Lname.value;
@@ -524,6 +613,7 @@
 
             let studentData = {
                 "id": generateId(),
+                "imageUrl": image,
                 "lastName": Lastname,
                 "firstName": firstname,
                 "midName": middleName,
@@ -545,7 +635,183 @@
             StudentList.showModal();
             displayStudent();
         }
-        displayStudent();   
+
+
+        function EditBtn(index) {
+            updatenewStdnt.showModal();
+            let student = students[index];
+            update.innerHTML = `
+            <h2>Update Student Information: ${student.firstName} ${student.lastName}</h2>
+
+            <form action="" method="dialog">
+                <div class="fullName" >
+                    <input type="text" placeholder="First Name" id="fname">
+                    <input type="text" placeholder="Middle Name" id="Mname">
+                    <input type="text" placeholder="Last Name" id="Lname">
+                </div>
+
+                <input type="text" placeholder="Address" style="width: 635px;" id="Address">
+                <div>
+                    <input type="text" placeholder="City" style="width: 310px;" id="city">
+                    <input type="text" placeholder="State/Province" style="width: 310px;" id="Province">
+                </div>
+                <div>
+                    <input type="date" placeholder="Birth Day" style="width: 200px;" id="Bday">
+                    <input type="number" placeholder="Age" id="Age" maxlength="2">
+                    <input type="text" placeholder="Nationality" id="Nationality">
+                </div>
+                <div>
+                    <input type="text" placeholder="Birth Place" style="width: 310px;" id="BirthPlace">
+                    <input type="text" placeholder="Religion" style="width: 310px;" id="Religion">
+                </div>
+                <div class="gender">
+                    <div class="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="male" value="male">
+                    </div>
+                    <div class="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                    </div>
+                    <div class="other">
+                        <label for="other">Other</label>
+                        <input type="radio" name="gender" id="other" value="N/A">
+                    </div>
+                </div>
+                <div>
+                    <input type="number" placeholder="Phone Number" style="width: 310px;" id="phoneNum" maxlength="11">
+                    <input type="email" placeholder="Email (example@example.com)" style="width: 310px;" id="emailAdd">
+                </div>
+
+                <div class="courseIs">
+                    <label for="course">Diploma you choose:</label>
+                    <select name="Diploma" id="course">
+                    <option value="Diploma in Information Technology">Diploma in Information Technology</option>
+                    <option value="Diploma in Mechanical Engineering Technology">Diploma in Mechanical Engineering Technology</option>
+                    <option value="Diploma in Mechanical Specialized in Welding">Diploma in Mechanical Specialized in Welding</option>
+                    <option value="Diploma in Civil Engineering Technology">Diploma in Civil Engineering Technology</option>
+                    </select>
+                </div>
+                <div class="attachImage">
+                    <label for="ImgUrl">Attach Image</label>
+                    <input type="text" name="" id="ImgUrl" placeholder="Attach Image using URL" style="width: 500px;">
+                </div>
+                <div class="formBtns">
+                    <button id="submit" onclick="UpdateStudent(${student.id})">Update</button>
+                    <button id="Cancel">Cancel</button>
+                </div>
+            </form>
+    `;
+
+        }
+        function UpdateStudent(id) {
+            let studentId = id;
+        // let findindex = students.findIndex(s => s.id === id);
+
+            let image = ImgUrl.value;
+            let firstname = fname.value;
+            let middleName = Mname.value;
+            let Lastname = Lname.value;
+            let AddressInfo = Address.value;
+            let cityInfo = city.value;
+            let StateProv = Province.value;
+            let Birthday = Bday.value;
+            let AgeOld = Age.value;
+            let nationality = Nationality.value;
+            let Birthplace = BirthPlace.value;
+            let religion = Religion.value;
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let phneNum = phoneNum.value;
+            let email = emailAdd.value;
+            let courseIs = course.value;
+
+            let studentData = {
+                "id": id,
+                "imageUrl": image,
+                "lastName": Lastname,
+                "firstName": firstname,
+                "midName": middleName,
+                "address": AddressInfo,
+                "city": cityInfo,
+                "province": StateProv,
+                "birthDay": Birthday,
+                "age": AgeOld,
+                "nationality": nationality,
+                "birthPlace": Birthplace,
+                "religion": religion,
+                "gender": gender,
+                "phoneNum": phneNum,
+                "email": email,
+                "diploma": courseIs
+            };
+
+    // Update the student data at the found index
+    students[studentId] = studentData;
+
+    console.log("Updated Student Data:", studentData);
+
+    // Close the dialog after updating
+    updatenewStdnt.close();
+    }
+        // function EditBtn(index) {
+        //     updatenewStdnt.showModal();
+        //     let student = students[index];
+        //     UpdateHeader.innerHTML = `
+        //     <h1>Update Info: ${student.firstName} ${student.lastName} </h1>
+        //     `;
+
+        //     function UpdateStudent(){
+        //     let findindex = newStudents.findIndex(student => student.id === id);
+
+        //     let image = ImgUrl.value;
+        //     let firstname = fname.value;
+        //     let middleName = Mname.value;
+        //     let Lastname = Lname.value;
+        //     let AddressInfo = Address.value;
+        //     let cityInfo = city.value;
+        //     let StateProv = Province.value;
+        //     let Birthday = Bday.value;
+        //     let AgeOld = Age.value;
+        //     let nationality = Nationality.value;
+        //     let Birthplace = BirthPlace.value;
+        //     let religion = Religion.value;
+        //     let gender = document.querySelector('input[name="gender"]:checked').value;
+        //     let phneNum = phoneNum.value;
+        //     let email = emailAdd.value;
+        //     let courseIs = course.value;
+
+        //     let studentData = {
+        //         "imageUrl": image,
+        //         "lastName": Lastname,
+        //         "firstName": firstname,
+        //         "midName": middleName,
+        //         "address": AddressInfo,
+        //         "city": cityInfo,
+        //         "province": StateProv,
+        //         "birthDay": Birthday,
+        //         "age": AgeOld,
+        //         "nationality": nationality,
+        //         "birthPlace": Birthplace,
+        //         "religion": religion,
+        //         "gender": gender,
+        //         "phoneNum": phneNum,
+        //         "email": email,
+        //         "diploma": courseIs
+        //     };
+        //     console.log(studentData);
+        //     accounts.newStudents.push(studentData);
+        //     StudentList.showModal();
+        //     displayStudent();
+        // }
+        // }
+
+
+        function removeItems(index) {
+            students.splice(index, 1);
+
+            displayStudent();
+        }
+        displayStudent();
         getData();
     </script>
 </body>

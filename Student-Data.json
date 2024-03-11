@@ -12,6 +12,7 @@
     "newStudents": [
         { 
             "id": 101,
+            "imageUrl" : "",
             "firstName": "Mauriane Jave",
             "midName": "Melody",
             "lastName": "Tan",
@@ -30,6 +31,7 @@
         },
         { 
             "id": 102,
+            "imageUrl" : "https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/393698970_3553501891581019_6366903589998943007_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFMg6FEcmf9OgL1DUMbGZ0MjlazwKwHmj6OVrPArAeaPrCy4gQYzqYRamkRLJ802DFUZBuiUEueQrNVGbMAVooI&_nc_ohc=TM6W8Pvmj8kAX-pr1gb&_nc_ht=scontent.fmnl4-4.fna&oh=00_AfDwWB6LprpomI6PAymsQoOadcHa-2l3f-RYcGM9wVfySQ&oe=65F33C1C",
             "firstName": "Paul",
             "midName": "Puerto",
             "lastName": "Morales",
@@ -48,7 +50,8 @@
             
         },
         { 
-            "id": 103,  
+            "id": 103,
+            "imageUrl" : "",
             "firstName": "Jinro",
             "midName": "Puerto",
             "lastName": "Militar",
