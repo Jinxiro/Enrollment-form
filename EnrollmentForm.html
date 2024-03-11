@@ -440,7 +440,7 @@
             contents.innerHTML = `
             
         <div class="avatar">
-            <img src="https://scontent.fdvo5-1.fna.fbcdn.net/v/t39.30808-1/382981942_648185724136222_1738161981365832909_n.jpg?stp=dst-jpg_p200x200&_nc_cat=102&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeHILAObOY3yfSYO4a2lRc1-O91fL2fsHLw73V8vZ-wcvBd-C42LoGQ9Cjg3wxm1_fQ7mqCGyn_atYWi4CgTj0FC&_nc_ohc=uYQ_3VWWvQwAX9vm3Nz&_nc_ht=scontent.fdvo5-1.fna&oh=00_AfC44d9ZsjH_AoVJdrSflQCMyv5q4PnORBthEl-3_JxVaw&oe=65EB88ED" alt="">
+            <img src="https://scontent.fmnl4-3.fna.fbcdn.net/v/t39.30808-1/393698970_3553501891581019_6366903589998943007_n.jpg?stp=dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeFMg6FEcmf9OgL1DUMbGZ0MjlazwKwHmj6OVrPArAeaPrCy4gQYzqYRamkRLJ802DFUZBuiUEueQrNVGbMAVooI&_nc_ohc=pkWyhvElU1IAX8b8rhy&_nc_ht=scontent.fmnl4-3.fna&oh=00_AfB0MZDNDyt_xncEIRRsZhsUw4PTpWhiSznFU9IsvHAJhg&oe=65EAFF5A" alt="">
             <h3>${student.firstName} ${student.midName} ${student.lastName}</h3>
             <p>ID: ${student.id}</p>
         </div> 
@@ -483,7 +483,7 @@
         function EnrollStudent() {
 
             let firstname = fname.value;
-            let midName = Mname.value;
+            let middleName = Mname.value;
             let Lastname = Lname.value;
             let AddressInfo = Address.value;
             let cityInfo = city.value;
@@ -501,7 +501,7 @@
                 "id": generateId(),
                 "lastName": Lastname,
                 "firstName": firstname,
-                "middleName": midName,
+                "midName": middleName,
                 "address": AddressInfo,
                 "city": cityInfo,
                 "province": StateProv,
@@ -519,7 +519,7 @@
             StudentList.showModal();
             displayStudent();
         }
-        displayStudent();
+        displayStudent();   
         getData();
     </script>
 </body>
